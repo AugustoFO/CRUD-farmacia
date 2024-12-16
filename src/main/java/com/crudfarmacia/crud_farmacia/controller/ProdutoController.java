@@ -22,6 +22,7 @@ import com.crudfarmacia.crud_farmacia.model.Categoria;
 import com.crudfarmacia.crud_farmacia.model.Produto;
 import com.crudfarmacia.crud_farmacia.repository.CategoriaRepository;
 import com.crudfarmacia.crud_farmacia.repository.ProdutoRepository;
+import com.crudfarmacia.crud_farmacia.service.ProdutoService;
 
 import jakarta.validation.Valid;
 
@@ -35,6 +36,9 @@ public class ProdutoController {
 	
 	@Autowired
 	private CategoriaRepository categoriaRepository;
+	
+	@Autowired
+	private ProdutoService produtoService;
 	
 	@GetMapping
 	public ResponseEntity<List<Produto>> buscaTodos(){
@@ -54,6 +58,12 @@ public class ProdutoController {
 	public ResponseEntity<List<Produto>> buscaPorNome(@PathVariable String nome){
 		
 		return ResponseEntity.ok(produtoRepository.findAllByNomeProdutoContainingIgnoreCase(nome));
+	}
+	
+	@GetMapping("/relatorio/{limite}")
+	public ResponseEntity<List<Produto>> geraRelatEstoque(@PathVariable Integer limite){
+		
+		return ResponseEntity.ok(produtoService.gerarRelatorioDeFaltaDeEstoque(limite));
 	}
 	
 	@PostMapping("/cadastrar")

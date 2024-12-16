@@ -12,4 +12,6 @@ import com.crudfarmacia.crud_farmacia.model.Produto;
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 
 	public List <Produto> findAllByNomeProdutoContainingIgnoreCase(@Param("nomeProduto") String nomeProduto);
+
+	public List<Produto> findByQtdEstoqueProdutoLessThan(@Param("limiteEstoque") Integer limiteEstoque);
 }
