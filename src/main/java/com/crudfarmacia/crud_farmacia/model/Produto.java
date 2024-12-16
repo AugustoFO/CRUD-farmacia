@@ -39,7 +39,7 @@ public class Produto {
 	
 	@NotNull(message = "O atributo quantidade em estoque é obrigatório.")
 	@Column(name = "qtdestoque_produto")
-	private int qtdEstoqueProduto;
+	private Integer qtdEstoqueProduto;
 	
 	@ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
@@ -81,7 +81,7 @@ public class Produto {
 		return qtdEstoqueProduto;
 	}
 
-	public void setQtdEstoqueProduto(int qtdEstoqueProduto) {
+	public void setQtdEstoqueProduto(Integer qtdEstoqueProduto) {
 		this.qtdEstoqueProduto = qtdEstoqueProduto;
 	}
 
