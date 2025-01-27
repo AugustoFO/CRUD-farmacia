@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.blogpessoal.blogpessoal.service.UsuarioService;
 import com.crudfarmacia.crud_farmacia.model.Usuario;
 import com.crudfarmacia.crud_farmacia.model.UsuarioLogin;
 import com.crudfarmacia.crud_farmacia.repository.UsuarioRepository;
+import com.crudfarmacia.crud_farmacia.service.UsuarioService;
 
 import jakarta.validation.Valid;
 

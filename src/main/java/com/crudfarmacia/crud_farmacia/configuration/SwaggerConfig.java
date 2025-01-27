@@ -1,4 +1,4 @@
-package com.blogpessoal.blogpessoal.configuration;
+package com.crudfarmacia.crud_farmacia.configuration;
 
 import org.springdoc.core.customizers.OpenApiCustomizer;
 import org.springframework.context.annotation.Bean;

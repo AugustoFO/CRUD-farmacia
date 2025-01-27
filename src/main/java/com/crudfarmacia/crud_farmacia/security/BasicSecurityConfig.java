@@ -1,4 +1,4 @@
-package com.blogpessoal.blogpessoal.security;
+package com.crudfarmacia.crud_farmacia.security;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 

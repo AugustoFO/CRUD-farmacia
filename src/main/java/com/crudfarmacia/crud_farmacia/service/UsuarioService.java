@@ -1,4 +1,4 @@
-package com.blogpessoal.blogpessoal.service;
+package com.crudfarmacia.crud_farmacia.service;
 
 import java.util.Optional;
 
@@ -11,10 +11,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.blogpessoal.blogpessoal.security.JwtService;
 import com.crudfarmacia.crud_farmacia.model.Usuario;
 import com.crudfarmacia.crud_farmacia.model.UsuarioLogin;
 import com.crudfarmacia.crud_farmacia.repository.UsuarioRepository;
+import com.crudfarmacia.crud_farmacia.security.JwtService;
 
 @Service
 public class UsuarioService {

@@ -1,4 +1,4 @@
-package com.blogpessoal.blogpessoal.security;
+package com.crudfarmacia.crud_farmacia.security;
 
 import java.security.Key;
 import java.util.Date;
